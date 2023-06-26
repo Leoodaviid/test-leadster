@@ -9,13 +9,17 @@ interface UseWebinarsData {
   totalWebinars: number;
 }
 
-export function useWebinars(category?: string) {
+export function useWebinars(category?: string, order?: string) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const { data, isLoading, isError } = useQuery<UseWebinarsData>(
-    ["webinars", category, currentPage],
+    ["webinars", category, order, currentPage],
     async () => {
-      const response = await getWebinars({ page: currentPage, category });
+      const response = await getWebinars({
+        page: currentPage,
+        category,
+        order,
+      });
       return { webinars: response.data, totalWebinars: response.total };
     },
     { keepPreviousData: true }

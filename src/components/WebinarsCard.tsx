@@ -8,6 +8,7 @@ import { FaPlay } from "react-icons/fa";
 interface WebinarsCardProps {
   data: WebinarsProps;
 }
+
 const WebinarsCard = ({ data }: WebinarsCardProps) => {
   const router = useRouter();
   return (
@@ -28,7 +29,7 @@ const WebinarsCard = ({ data }: WebinarsCardProps) => {
         />
       </div>
       <div className="p-5 rounded-b-2xl">
-        <p className="font-bold group-hover:text-[#007eff]">
+        <p className="font-extrabold group-hover:text-[#007eff]">
           {data.title}
           {data.author}
         </p>

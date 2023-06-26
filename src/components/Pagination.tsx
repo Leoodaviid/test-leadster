@@ -12,15 +12,14 @@ const Pagination = ({
   const pages = Array.from(Array(totalPages).keys()).map((i) => i + 1);
 
   return (
-    <div className="flex justify-center items-center gap-3 font-semibold text-base">
+    <div className="flex justify-center items-center gap-1 font-semibold text-lg">
       Página
       {pages.map((page) => (
         <button
           key={page}
-          className={`${
-            page === currentPage
-              ? "border border-[#2c83fb] font-bold text-[#2c83fb] transition px-3 py-1 rounded-md"
-              : "px-1 py-1"
+          className={`rounded-md px-3 py-0.5 ${
+            page === currentPage &&
+            "border border-[#2c83fb] font-extrabold text-[#2c83fb] transition"
           }`}
           onClick={() => onPageChange(page)}
         >

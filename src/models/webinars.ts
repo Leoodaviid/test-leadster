@@ -15,6 +15,7 @@ export interface CategoriesProps {
 export interface GetWebinarsProps {
   page: number;
   category?: string;
+  order?: string;
 }
 
 export interface GetWebinarsResponse {

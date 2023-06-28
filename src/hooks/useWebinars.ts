@@ -1,5 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { getWebinars, getAllWebinars } from "@/service/mainApi/webinars";
+import {
+  getWebinars,
+  getAllWebinars,
+  getWebinarsId,
+} from "@/service/mainApi/webinars";
 import { WebinarsProps } from "@/models/webinars";
 import { useState } from "react";
 import { WEBINARS_PER_PAGE } from "@/utils/webinarsUtils";
@@ -40,6 +44,14 @@ export function useWebinars(category?: string, order?: string) {
 export function useAllWebinars() {
   return useQuery<WebinarsProps[]>(["allWebinars"], async () => {
     const response = await getAllWebinars();
+
+    return response.data;
+  });
+}
+
+export function useWebinarsId(webinarsId?: string) {
+  return useQuery<WebinarsProps>(["webinars", webinarsId], async () => {
+    const response = await getWebinarsId(webinarsId);
 
     return response.data;
   });

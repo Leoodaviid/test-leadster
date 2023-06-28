@@ -17,3 +17,13 @@
   margin: 0 auto;
   padding: 0 0.75rem;
 }
+.shape {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  left: -75%;
+  top: 35%;
+  border-radius: 8%;
+  background: #f2f9ff;
+  transform: rotate(-135deg);
+}

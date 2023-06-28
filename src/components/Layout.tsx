@@ -2,7 +2,7 @@
 import React from "react";
 import Header from "./Header";
 import { ReactNode } from "react";
-import WebinarsModal from "@/components/WebinarsModal";
+import WebinarsModal from "@/components/webinar/WebinarsModal";
 import useModal from "@/hooks/useModal";
 
 interface LayoutProps {

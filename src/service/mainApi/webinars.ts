@@ -21,3 +21,6 @@ export const getWebinars = async ({
 };
 
 export const getAllWebinars = () => api.get<WebinarsProps[]>(`/webinars`);
+
+export const getWebinarsId = (webinarsId?: string) =>
+  api.get<WebinarsProps>(`/webinars/${webinarsId}`);

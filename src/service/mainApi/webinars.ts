@@ -11,9 +11,15 @@ export const getWebinars = async ({
   category,
   order,
 }: GetWebinarsProps): Promise<GetWebinarsResponse> => {
-  const response = await api.get<WebinarsProps[]>(
-    `/webinars?_page=${page}&_limit=${WEBINARS_PER_PAGE}&category=${category}&_sort=createdAt&_order=${order}`
-  );
+  const response = await api.get<WebinarsProps[]>(`/webinars`, {
+    params: {
+      _page: page,
+      _limit: WEBINARS_PER_PAGE,
+      category,
+      _order: order,
+      _sort: "createdAt",
+    },
+  });
 
   const total = parseInt(response.headers["x-total-count"]);
 

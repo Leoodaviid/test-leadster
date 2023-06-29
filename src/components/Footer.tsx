@@ -18,7 +18,7 @@ const Footer = () => {
             Transformando visitantes em clientes.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-3 justify-start items-start text-sm lg:text-base text-[#7f88a6] pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-3 justify-start items-start text-sm text-[#7f88a6] pb-10">
           <div className="flex flex-col gap-4 pb-4">
             <p className="md:pb-10 text-lg lg:text-xl font-semibold text-slate-700">
               Links Principais
@@ -110,7 +110,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-wrap justify-between border-t border-slate-200 text-sm gap-2 md:text-base text-[#7f88a6] pt-10 pb-5">
+        <div className="flex flex-wrap justify-between border-t border-slate-200 text-sm gap-2 text-[#7f88a6] pt-10 pb-5">
           <p>
             Copyright &copy; 2015 - 2022 Todos os direitos reservados |{" "}
             <a href="#hero-banner" className="text-primary-blue">

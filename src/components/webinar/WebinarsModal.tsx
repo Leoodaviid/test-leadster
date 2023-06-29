@@ -15,7 +15,6 @@ const WebinarsModal = ({ visible, onClose }: WebinarsModalProps) => {
   const [isVisible, setIsVisible] = useState(!!visible);
   const { webinarsId } = useModal();
   const { data } = useWebinarsId(webinarsId);
-  console.log("webinarsId: ", data);
 
   useEffect(() => {
     setIsVisible(!!visible);

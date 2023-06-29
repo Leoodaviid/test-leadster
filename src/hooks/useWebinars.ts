@@ -51,6 +51,11 @@ export function useAllWebinars() {
 
 export function useWebinarsId(webinarsId?: string) {
   return useQuery<WebinarsProps>(["webinars", webinarsId], async () => {
+    // Verifica se webinarsId está indefinido
+    if (webinarsId === undefined) {
+      // Se webinarsId for indefinido, retorna um objeto vazio
+      return {} as WebinarsProps;
+    }
     const response = await getWebinarsId(webinarsId);
 
     return response.data;

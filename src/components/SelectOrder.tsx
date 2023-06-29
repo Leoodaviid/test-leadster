@@ -12,7 +12,7 @@ const SelectOrder = ({ options, onOrderChange, label }: SelectProps) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full lg:w-[46%] flex justify-end items-center gap-3">
+    <div className="w-full lg:w-[46%] flex justify-end items-center gap-3 text-slate-700">
       {label && <span className="font-bold">{label}</span>}
       <div className="relative">
         <select
@@ -21,7 +21,7 @@ const SelectOrder = ({ options, onOrderChange, label }: SelectProps) => {
           }
           onClick={() => setOpen(!open)}
           onBlur={() => setOpen(false)}
-          className="w-48 border border-zinc-900 rounded-xl appearance-none pl-3 py-1 font-medium"
+          className="w-48 border border-slate-700 rounded-xl appearance-none pl-3 py-1 font-medium"
         >
           {options.map(({ value, label }) => (
             <option key={value} value={value}>

@@ -8,7 +8,7 @@ import LinkButton from "@/components/Buttons/LinkButton";
 
 const LeadsGeneration = () => {
   return (
-    <section className="py-16 bg-[#F9FCFF] text-zinc-700 relative overflow-hidden">
+    <section className="py-16 bg-[#F9FCFF] text-slate-700 relative overflow-hidden">
       <div className="shape z-0 sm:-left-[50%] md:-left-[30%] xl:-left-[10%]" />
       <div className=" container w-full grid grid-cols-1 md:grid-cols-2">
         <div className="flex justify-start md:justify-end items-center">
@@ -29,7 +29,7 @@ const LeadsGeneration = () => {
           <h3 className="font-semibold text-lg">
             Criação e ativação <strong>em 4 minutos.</strong>
           </h3>
-          <div className="w-full flex justify-start items-center border-t border-slate-300 pt-3 gap-3">
+          <div className="w-full flex justify-start items-center border-t border-slate-200 pt-3 gap-3">
             <LinkButton href="#">Ver demonstração</LinkButton>
             <Image src={Stamp} alt="Selo RD." />
           </div>

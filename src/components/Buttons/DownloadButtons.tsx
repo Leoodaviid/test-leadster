@@ -7,7 +7,7 @@ interface DownloadButtonsProps {
 
 const DownloadButtons = ({ onDownload }: DownloadButtonsProps) => {
   return (
-    <>
+    <div className="flex gap-1 flex-wrap">
       <div className="flex justify-center items-center text-[#00ae7f]">
         <BsCloudDownload
           size={16}
@@ -20,10 +20,10 @@ const DownloadButtons = ({ onDownload }: DownloadButtonsProps) => {
           Spreadsheet.xls
         </button>
       </div>
-      <div className="flex justify-center items-center text-[#007eed]">
+      <div className="flex justify-center items-center text-primary-blue">
         <BsCloudDownload
           size={16}
-          className="bg-[#a1d9ff] text-[#007eed] h-7 w-7 pt-1 pb-0.5 px-1.5 rounded-l-md font-semibold"
+          className="bg-[#a1d9ff] text-primary-blue h-7 w-7 pt-1 pb-0.5 px-1.5 rounded-l-md font-semibold"
         />
         <button
           className="flex justify-center items-center gap-1 bg-[#c2e6ff] px-2 py-1.5 rounded-r-md text-xs font-semibold"
@@ -44,7 +44,7 @@ const DownloadButtons = ({ onDownload }: DownloadButtonsProps) => {
           Presentation.ppt
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

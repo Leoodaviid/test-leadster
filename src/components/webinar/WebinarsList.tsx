@@ -14,6 +14,7 @@ const WebinarsList = () => {
   const [currentOrder, setCurrentOrder] = useState<string>("asc");
   const {
     data: webinars,
+    isLoading,
     currentPage,
     setCurrentPage,
     totalPages,
@@ -23,16 +24,17 @@ const WebinarsList = () => {
 
   const onFilterClick = (category?: string) => {
     if (category === currentCategory) {
-      setCurrentCategory("");
+      setCurrentCategory(currentCategory);
     } else {
       setCurrentCategory(category);
+      setCurrentPage(1);
     }
   };
 
   return (
     <section className="py-12">
       <div className="container">
-        <div className="w-full max-w-[1320px] m-auto flex flex-col gap-3 justify-center lg:flex-row items-center py-5 border-b border-slate-300">
+        <div className="w-full max-w-[1320px] m-auto flex flex-col gap-3 justify-center lg:flex-row items-center py-5 border-b border-slate-200">
           <Filter
             category={webinarsCategory}
             currentCategory={currentCategory}
@@ -47,7 +49,7 @@ const WebinarsList = () => {
             label="Ordenar por"
           />
         </div>
-        <div className="w-full max-w-[1320px] m-auto grid grid-cols-auto sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-5 py-12 border-b border-slate-300">
+        <div className="w-full max-w-[1320px] m-auto grid grid-cols-auto sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-5 py-12 border-b border-slate-200">
           {webinars?.map((webinar) => (
             <WebinarsCard key={webinar.id} data={webinar} />
           ))}

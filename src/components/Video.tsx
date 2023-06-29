@@ -36,7 +36,7 @@ const Video = ({ url, thumbnail, width, height }: VideoProps) => {
           />
           <button
             onClick={handlePlayClick}
-            className="absolute group-hover:flex top-[52%] left-[51%] drop-shadow-2xl transition transform -translate-x-1/2 -translate-y-1/2 text-6xl bg-transparent border-none cursor-pointer"
+            className="absolute group-hover:flex top-[42%] sm:top-[52%] left-[51%] drop-shadow-2xl transition transform -translate-x-1/2 -translate-y-1/2 text-6xl bg-transparent border-none cursor-pointer"
           >
             <FaPlay className="" size={95} color="white" />
           </button>

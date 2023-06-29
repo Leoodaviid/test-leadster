@@ -19,7 +19,7 @@ const Pagination = ({
           key={page}
           className={`rounded-md px-3 py-0.5 ${
             page === currentPage &&
-            "border border-[#2c83fb] font-extrabold text-[#2c83fb] transition"
+            "border border-primary-blue font-extrabold text-primary-blue transition duration-500 ease-in-out"
           }`}
           onClick={() => onPageChange(page)}
         >

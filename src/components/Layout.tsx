@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
+import React, { ReactNode } from "react";
 import Header from "./Header";
-import { ReactNode } from "react";
 import WebinarsModal from "@/components/webinar/WebinarsModal";
 import useModal from "@/hooks/useModal";
+import Footer from "./Footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,6 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
         <WebinarsModal visible={isOpen} onClose={closeModal} />
         {children}
       </main>
+      <Footer />
     </>
   );
 };

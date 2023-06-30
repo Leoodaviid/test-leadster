@@ -31,10 +31,10 @@ const LeadsGeneration = () => {
           </h3>
           <div className="w-full lg:w-11/12 flex justify-start items-center border-t border-slate-200 pt-3 gap-3">
             <LinkButton href="#">Ver demonstração</LinkButton>
-            <Image className="md:w-5/12" src={Stamp} alt="Selo RD." />
+            <Image className="w-5/12" src={Stamp} alt="Selo RD." />
           </div>
           <div className="w-full flex justify-start items-center font-bold text-xs">
-            <div className="w-6/12 xl:w-60 flex justify-start items-center gap-1">
+            <div className="w-6/12 xl:w-60 flex flex-col sm:flex-row justify-start items-center gap-1">
               <Image
                 className="w-4 h-4"
                 width={16}
@@ -44,7 +44,7 @@ const LeadsGeneration = () => {
               />
               <p>Não é necessário cartão de crédito |</p>
             </div>
-            <div className="w-7/12 flex justify-start items-center gap-1 pl-1">
+            <div className="w-7/12 flex flex-col sm:flex-row justify-start items-center gap-1 pl-1">
               <Image
                 className="w-24 h-6 pb-1.5 pt-0.5"
                 width={92}

@@ -7,7 +7,7 @@ import { ReactQueryProvider } from "@/providers/ReactQueryProvider";
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Leadster",
+  title: "Leadster: Webinars",
   description: "Transformando visitantes em clientes.",
 };
 
